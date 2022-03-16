@@ -108,8 +108,19 @@ BOUTONS EXPLORER---------------*/
 
 .boutons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+}
+.boutons p {
+  text-align: center;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: #9356DC;
+  color: white;
+  margin-right: -8px;
+  position: relative;
+  z-index: 1;
 }
 .boutons .btn {
   display: flex;
@@ -123,17 +134,6 @@ BOUTONS EXPLORER---------------*/
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 5px 5px #bdbbbb;
-}
-
-.boutons button {
-  border: none;
-}
-.boutons button p {
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  background-color: #9356DC;
-  color: white;
 }
 
 .btn i {
@@ -227,6 +227,12 @@ a figcaption {
   margin-left: 15px;
 }
 
+.entrees {
+  opacity: 0;
+  transition: opacity 250ms;
+  opacity: 1;
+}
+
 .nom_restaurants {
   display: flex;
   justify-content: center;
@@ -262,6 +268,28 @@ a figcaption {
   border-bottom-right-radius: 15px;
   width: 30px;
 }
+.descriptif:hover .selectionner i {
+  overflow: hidden;
+  transform: scale(0.2);
+  transform: rotate(-360deg);
+  transition: transform 330ms ease-in-out;
+}
+
+.selectionner {
+  width: 0;
+  overflow: hidden;
+  margin-left: 5px;
+  background-color: #99E2D0;
+  position: relative;
+  transition: transform 10s;
+}
+
+.selectionner i {
+  text-align: center;
+  color: white;
+  font-size: 150%;
+  transition: transform;
+}
 
 .nom {
   margin-left: 8px;
@@ -276,22 +304,6 @@ a figcaption {
   margin-top: 24px;
   font-weight: 1000;
   margin-right: 10px;
-}
-
-.selectionner {
-  width: 0;
-  overflow: hidden;
-  margin-left: 5px;
-  transition: transform 200s;
-  transition-property: transform;
-  background-color: #99E2D0;
-}
-
-.selectionner i {
-  margin-right: 20px;
-  text-align: center;
-  color: white;
-  font-size: 120%;
 }
 
 #menu button {

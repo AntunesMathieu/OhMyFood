@@ -144,8 +144,20 @@ BOUTONS EXPLORER---------------*/
   .boutons
   {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    & p
+      {
+        text-align: center;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        background-color: $color-primary;
+        color: white;
+        margin-right: -8px;
+        position: relative;
+        z-index: 1;
+      }
     .btn
     {
       display: flex;
@@ -160,20 +172,7 @@ BOUTONS EXPLORER---------------*/
       border-radius: 15px;
       box-shadow: 5px 5px 5px $color-shadow;
     }
-} 
-
-.boutons button{
-  border: none;
-  & p
-      {
-        border-radius: 50%;
-        height: 20px;
-        width: 20px;
-        background-color: $color-primary;
-        color: white;
-      }
 }
-
 
 .btn i{
     margin-right: 15px; 
@@ -289,6 +288,14 @@ a{
       margin-left: 15px;
     }
 }
+
+.entrees
+{
+  opacity: 0;
+  transition: opacity 250ms;
+  opacity: 1;
+}
+
 .nom_restaurants{
   display: flex;
   justify-content: center;
@@ -329,7 +336,31 @@ a{
       border-bottom-right-radius: 15px;
       width: 30px;
     }
+    .selectionner i
+    {
+      overflow: hidden;
+      transform: scale(.2);
+      transform: rotate(-360deg);
+      transition: transform 330ms ease-in-out;
+    }
   }
+}
+
+.selectionner
+{
+  width: 0;
+  overflow: hidden;
+  margin-left: 5px;
+  background-color: $color-tertiary;
+  position: relative;
+  transition: transform 10s;
+}
+
+.selectionner i{
+  text-align: center;
+  color: white;
+  font-size: 150%;
+  transition: transform;
 }
 
 .nom{
@@ -348,23 +379,6 @@ a{
   font-weight: 1000;
   margin-right: 10px;
 }
-
-.selectionner
-{
-  width: 0;
-  overflow: hidden;
-  margin-left: 5px;
-  transition: transform 200s;
-  transition-property: transform;
-  background-color: $color-tertiary;
-}
-  
-  .selectionner i{
-    margin-right: 20px;
-    text-align: center;
-    color: white;
-    font-size: 120%;
-  }
 
 #menu button
   {
