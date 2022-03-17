@@ -1,5 +1,56 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Shrikhand&display=swap");
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 35px;
+  }
+}
+@keyframes heart {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
 body {
   margin: auto;
   font-size: 80%;
@@ -28,7 +79,9 @@ header #images_restaurants {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: -5px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .header_menu a {
   width: 0px;
@@ -36,10 +89,11 @@ header #images_restaurants {
 .header_menu .fleche {
   font-size: 150%;
   color: #222222;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 .header_menu img {
   width: 45%;
+  margin: auto;
 }
 
 #recherche {
@@ -108,39 +162,39 @@ BOUTONS EXPLORER---------------*/
 
 .boutons {
   display: flex;
-  flex-direction: row;
   align-items: center;
-}
-.boutons p {
-  text-align: center;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  background-color: #9356DC;
-  color: white;
-  margin-right: -8px;
-  position: relative;
-  z-index: 1;
-}
-.boutons .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
   border: none;
   background-color: #f6f6f6;
   width: 90%;
   height: 60px;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 18px;
   box-shadow: 5px 5px 5px #bdbbbb;
+  margin: auto;
+  margin-top: 15px;
+}
+.boutons .number {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: #9356DC;
+  color: white;
+  margin-left: -25px;
+  position: relative;
+  z-index: 5;
+}
+.boutons .test {
+  text-align: center;
+  margin: auto;
 }
 
-.btn i {
+.boutons i {
   margin-right: 15px;
   color: #bdbbbb;
 }
-.btn i:hover {
+.boutons i:hover {
   color: #9356DC;
 }
 
@@ -163,7 +217,7 @@ BOUTONS EXPLORER---------------*/
   border-top-right-radius: 10px;
 }
 #restaurants a {
-  margin-left: -20px;
+  width: 100%;
 }
 
 a {
@@ -174,7 +228,9 @@ a figure {
   background-color: white;
   border-radius: 10px;
   box-shadow: 3px 3px 3px #bdbbbb;
-  width: 83%;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 15px;
 }
 a figcaption {
   display: flex;
@@ -206,6 +262,7 @@ a figcaption {
 }
 .aime:hover .coeurplein {
   display: flex;
+  animation: heart 0.5s;
 }
 .aime:hover .coeurvide {
   display: none;
@@ -225,12 +282,6 @@ a figcaption {
   font-weight: 20;
   text-decoration: underline #99E2D0 2px;
   margin-left: 15px;
-}
-
-.entrees {
-  opacity: 0;
-  transition: opacity 250ms;
-  opacity: 1;
 }
 
 .nom_restaurants {
@@ -259,33 +310,40 @@ a figcaption {
   width: 90%;
   height: 55px;
   box-shadow: 2px 2px 2px #bdbbbb;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  /* Firefox */
+  -webkit-animation: fadein 3s;
+  /* Safari et Chrome */
+  -o-animation: fadein 3s;
+  /* Opera */
 }
 .descriptif:hover .selectionner {
-  padding-top: 20.5px;
-  padding-bottom: 20.5px;
+  transition: transform;
+  width: 35px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   padding-left: 20px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  width: 30px;
+  animation: slide 0.4s;
 }
 .descriptif:hover .selectionner i {
   overflow: hidden;
-  transform: scale(0.2);
-  transform: rotate(-360deg);
-  transition: transform 330ms ease-in-out;
+  transform: rotate(360deg);
+  transition: transform 320ms ease-in-out;
 }
 
 .selectionner {
   width: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   overflow: hidden;
   margin-left: 5px;
   background-color: #99E2D0;
   position: relative;
-  transition: transform 10s;
+  transform: width(35px) rotate(180deg);
 }
 
 .selectionner i {
-  text-align: center;
   color: white;
   font-size: 150%;
   transition: transform;

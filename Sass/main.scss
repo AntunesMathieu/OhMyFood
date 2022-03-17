@@ -48,7 +48,9 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: -5px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
     & a
     {
       width: 0px;
@@ -57,11 +59,12 @@ header{
     {
       font-size: 150%;
       color: $color-bold;
-      margin-left: 20px;
+      margin-left: 25px;
     }
     & img
     {
       width: 45%;
+      margin: auto;
     }
 }
 
@@ -141,46 +144,46 @@ BOUTONS EXPLORER---------------*/
     }
   }
 
-  .boutons
-  {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    & p
-      {
-        text-align: center;
-        border-radius: 50%;
-        height: 20px;
-        width: 20px;
-        background-color: $color-primary;
-        color: white;
-        margin-right: -8px;
-        position: relative;
-        z-index: 1;
-      }
-    .btn
+.boutons
+{
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: $backgroud;
+  width: 90%;
+  height: 60px;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 5px 5px 5px $color-shadow;
+  margin: auto;
+  margin-top: 15px;
+    .number
     {
       display: flex;
-      align-items: center;
       justify-content: center;
-      margin-top: 15px;
-      border: none;
-      background-color: $backgroud;
-      width: 90%;
-      height: 60px;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 5px 5px 5px $color-shadow;
-    }
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      background-color: $color-primary;
+      color: white;
+      margin-left: -25px;
+      position: relative;
+      z-index: 5;
+      } 
+      .test
+      {
+        text-align: center;
+        margin: auto;
+      }
 }
 
-.btn i{
-    margin-right: 15px; 
-    color: $color-shadow;
-        &:hover
-        {
-            color: $color-primary;
-        }
+.boutons i{
+  margin-right: 15px; 
+  color: $color-shadow;
+    &:hover
+    {
+      color: $color-primary;
+    }
 }
 
 
@@ -207,7 +210,7 @@ BOUTONS EXPLORER---------------*/
         }
         & a
         {
-          margin-left: -20px;
+          width: 100%;
         }
 }
 
@@ -219,7 +222,9 @@ a{
             background-color: white;
             border-radius: 10px;
             box-shadow: 3px 3px 3px $color-shadow;
-            width: 83%;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 15px;
         }
         figcaption
         {
@@ -259,6 +264,7 @@ a{
       .coeurplein
       {
         display: flex;
+        animation: heart .5s;
       }
       .coeurvide
       {
@@ -287,13 +293,6 @@ a{
       text-decoration: underline $color-tertiary 2px;
       margin-left: 15px;
     }
-}
-
-.entrees
-{
-  opacity: 0;
-  transition: opacity 250ms;
-  opacity: 1;
 }
 
 .nom_restaurants{
@@ -325,23 +324,26 @@ a{
   width: 90%;
   height: 55px;
   box-shadow: 2px 2px 2px $color-shadow;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari et Chrome */
+  -o-animation: fadein 3s; /* Opera */
   &:hover
   {
     .selectionner
     {
-      padding-top: 20.5px;
-      padding-bottom: 20.5px;
+      transition: transform;
+      width: 35px;
+      padding-top: 18px;
+      padding-bottom: 18px;
       padding-left: 20px;
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      width: 30px;
+      animation: slide .4s;    
     }
     .selectionner i
     {
       overflow: hidden;
-      transform: scale(.2);
-      transform: rotate(-360deg);
-      transition: transform 330ms ease-in-out;
+      transform: rotate(360deg);
+      transition: transform 320ms ease-in-out;
     }
   }
 }
@@ -349,15 +351,16 @@ a{
 .selectionner
 {
   width: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   overflow: hidden;
   margin-left: 5px;
   background-color: $color-tertiary;
   position: relative;
-  transition: transform 10s;
+  transform: width(35px) rotate(180deg);
 }
 
 .selectionner i{
-  text-align: center;
   color: white;
   font-size: 150%;
   transition: transform;
