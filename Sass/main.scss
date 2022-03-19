@@ -28,7 +28,7 @@ header{
     flex-wrap: wrap;
     & .logo
     {
-        width: 50%;
+        width: 30%;
         margin: auto;
         margin-top: 18px;
         margin-bottom: 15px;
@@ -51,6 +51,7 @@ header{
   margin: auto;
   margin-bottom: 10px;
   margin-top: 10px;
+  width: 100%;
     & a
     {
       width: 0px;
@@ -59,11 +60,11 @@ header{
     {
       font-size: 150%;
       color: $color-bold;
-      margin-left: 25px;
+      margin-left: 18px;
     }
     & img
     {
-      width: 45%;
+      width: 30%;
       margin: auto;
     }
 }
@@ -282,6 +283,7 @@ a{
 #menu{
   background-color: $backgroud;
   padding-bottom: 10px;
+  margin-bottom: -30px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   z-index: 1;
@@ -292,7 +294,29 @@ a{
       font-weight: 20;
       text-decoration: underline $color-tertiary 2px;
       margin-left: 15px;
+      width: 12%;
     }
+    & .entrees
+  {
+    animation: fadein 3.5s;
+    -moz-animation: fadein 3.5s; /* Firefox */
+    -webkit-animation: fadein 3.5s; /* Safari et Chrome */
+    -o-animation: fadein 3.5s; /* Opera */
+  }
+  & .plats
+  {
+    animation: fadein 4.5s;
+    -moz-animation: fadein 4.5s; /* Firefox */
+    -webkit-animation: fadein 4.5s; /* Safari et Chrome */
+    -o-animation: fadein 4.5s; /* Opera */
+  }
+  & .desserts
+  {
+    animation: fadein 5.5s;
+    -moz-animation: fadein 5.5s; /* Firefox */
+    -webkit-animation: fadein 5.5s; /* Safari et Chrome */
+    -o-animation: fadein 5.5s; /* Opera */
+  }
 }
 
 .nom_restaurants{
@@ -319,15 +343,11 @@ a{
   align-items: center;
   background-color: white;
   border-radius: 15px;
-  margin-bottom: 15px;
-  margin-left: 15px;
-  width: 90%;
+  width: 95%;
   height: 55px;
+  margin: auto;
+  margin-bottom: 15px;
   box-shadow: 2px 2px 2px $color-shadow;
-  animation: fadein 3s;
-  -moz-animation: fadein 3s; /* Firefox */
-  -webkit-animation: fadein 3s; /* Safari et Chrome */
-  -o-animation: fadein 3s; /* Opera */
   &:hover
   {
     .selectionner
@@ -337,7 +357,8 @@ a{
       padding-top: 18px;
       padding-bottom: 18px;
       padding-left: 20px;
-      animation: slide .4s;    
+      height: 20px;
+      animation: slide .5s;    
     }
     .selectionner i
     {
@@ -369,7 +390,7 @@ a{
 .nom{
   margin-left: 8px;
   margin-top: 0px;
-  width: 80%;
+  width: 92%;
     & p
     {
       margin-top: -12px;
@@ -432,4 +453,94 @@ footer
     margin-right: 6px;
     font-size: 70%;
   }
+}
+
+
+/*--------------PARTIE RESPONSIVE---------------*/
+
+
+@media (min-width: 700px){
+
+
+/*---PARTIE EN-TÊTE---*/
+
+
+
+
+/*----PATIE FONCTIONNEMENT----*/
+
+
+.fonctionnement{
+  & h2
+  {
+    margin-left: 6px;
+  }
+.btn{
+  display: flex;
+  flex-direction: row;
+  width: 99%;
+  margin-left: -2px;
+    & .boutons
+    {
+      margin-left: 8px;
+    }
+}
+}
+
+
+/*---PARTIE RESTAURANTS---*/
+
+
+#restaurants{ 
+  & h2
+      {
+        margin-left: 6px;
+      }
+  .choix-restaurant{
+    display: flex;
+    flex-direction: row;
+      & .aime
+      {
+        margin-right: 8px;
+      }
+      & .nom_restaurant
+      {
+        width: 80%;
+      }
+      & figure
+      {
+        width: 95%;
+      }
+  }
+}
+
+
+/*---PARTIE MENU---*/
+
+
+
+}
+
+
+@media (min-width: 1000px){
+
+
+.choix-menu{
+  display: flex;
+  justify-content: space-between;
+  & .entrees
+  {
+    width: 32%;
+  }
+  & .plats
+  {
+    width: 32%;
+  }
+  & .desserts
+  {
+    width: 32%;
+  }
+}
+
+
 }
