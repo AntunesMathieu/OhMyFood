@@ -49,3 +49,31 @@
         transform: scaleY(1);
     }
 }
+
+@keyframes spin{
+    0%{ transform: rotate(0deg) }
+    100%{ transform: rotate(360deg)}
+}
+
+@keyframes loader{
+    from{
+        opacity: 0;
+    }
+    
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes toloader{
+    from{
+        margin-top: 70%;
+        width: 100%;
+    }
+
+    to{
+        width: 0;
+        margin: 0;
+        height: 0;
+    }
+}
