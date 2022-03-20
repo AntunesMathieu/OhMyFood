@@ -44,10 +44,19 @@
   }
 }
 @keyframes heart {
-  from {
+  0% {
     transform: scaleY(0);
   }
-  to {
+  25% {
+    transform: scaleY(0.2);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  75% {
+    transform: scaleY(0.8);
+  }
+  100% {
     transform: scaleY(1);
   }
 }
@@ -60,21 +69,23 @@
   }
 }
 @keyframes loader {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
     opacity: 1;
   }
 }
 @keyframes toloader {
   from {
-    margin-top: 70%;
-    width: 100%;
+    opacity: 1;
   }
   to {
-    width: 0;
-    margin: 0;
+    opacity: 0;
+    margin-top: 0;
     height: 0;
   }
 }
@@ -86,14 +97,16 @@ body {
 
 /*-----------------PARTIE LOADER-------------------*/
 .loader {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   height: 100px;
   line-height: 100px;
+  margin-top: 80%;
   padding: 0;
-  font-family: "Roboto";
   font-size: 40px;
   color: #222222;
-  animation: toloader 3s;
+  animation: toloader 3s linear;
+  animation-fill-mode: forwards;
 }
 .loader .chargement {
   width: 50px;
@@ -105,7 +118,7 @@ body {
 .loader .loader-quart {
   position: relative;
   border-radius: 50px;
-  border: 6px solid rgba(255, 255, 255, 0.4);
+  border: 6px solid rgba(139, 136, 136, 0.4);
 }
 .loader .loader-quart:after {
   content: "";
@@ -123,8 +136,8 @@ body {
 }
 
 header, .grand-titre, .fonctionnement, #restaurants, footer {
-  animation: loader 5s;
-  transition-delay: 10s;
+  animation-name: loader;
+  animation-duration: 4s;
 }
 
 /*-----------------PARTIE EN-TÊTE-------------*/
@@ -218,6 +231,12 @@ BOUTONS EXPLORER---------------*/
   border: none;
   padding: 15px;
   box-shadow: 3px 3px 3px #bdbbbb;
+  transform: scale(1);
+  transition: transform 0.8s;
+}
+.btn-titre:hover {
+  transform: scale(1.08);
+  box-shadow: 5px 5px 5px #bdbbbb;
 }
 
 /*-----------------PARTIE FONCTIONNEMENT---------------*/
@@ -243,6 +262,12 @@ BOUTONS EXPLORER---------------*/
   box-shadow: 5px 5px 5px #bdbbbb;
   margin: auto;
   margin-top: 15px;
+  transform: scale(1);
+  transition: transform 0.8s;
+}
+.boutons:hover {
+  transform: scale(1.03);
+  box-shadow: 7px 7px 7px #bdbbbb;
 }
 .boutons .number {
   display: flex;
@@ -333,7 +358,7 @@ a figcaption {
 }
 .aime:hover .coeurplein {
   display: flex;
-  animation: heart 0.5s;
+  animation: heart 0.8s;
 }
 .aime:hover .coeurvide {
   display: none;
@@ -356,7 +381,7 @@ a figcaption {
   margin-left: 15px;
   width: 12%;
 }
-#menu .entrees {
+#menu .entrees .descriptif {
   animation: fadein 3.5s;
   -moz-animation: fadein 3.5s;
   /* Firefox */
@@ -365,7 +390,7 @@ a figcaption {
   -o-animation: fadein 3.5s;
   /* Opera */
 }
-#menu .plats {
+#menu .plats .descriptif {
   animation: fadein 4.5s;
   -moz-animation: fadein 4.5s;
   /* Firefox */
@@ -374,7 +399,7 @@ a figcaption {
   -o-animation: fadein 4.5s;
   /* Opera */
 }
-#menu .desserts {
+#menu .desserts .descriptif {
   animation: fadein 5.5s;
   -moz-animation: fadein 5.5s;
   /* Firefox */
@@ -471,6 +496,12 @@ a figcaption {
   margin-top: 35px;
   margin-bottom: 50px;
   box-shadow: 3px 3px 3px #bdbbbb;
+  transform: scale(1);
+  transition: transform 0.8s;
+}
+#menu button:hover {
+  transform: scale(1.08);
+  box-shadow: 5px 5px 5px #bdbbbb;
 }
 
 /*--------------PARTIE PIED DE PAGE-----------------*/
