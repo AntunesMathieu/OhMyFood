@@ -40,7 +40,7 @@
     width: 0px;
   }
   to {
-    width: 35px;
+    width: 70px;
   }
 }
 @keyframes heart {
@@ -85,8 +85,6 @@
   }
   to {
     opacity: 0;
-    margin-top: 0;
-    height: 0;
   }
 }
 body {
@@ -99,14 +97,19 @@ body {
 .loader {
   display: flex;
   justify-content: center;
+  margin-top: 85%;
   height: 100px;
   line-height: 100px;
-  margin-top: 80%;
   padding: 0;
   font-size: 40px;
   color: #222222;
   animation: toloader 3s linear;
   animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 .loader .chargement {
   width: 50px;
@@ -135,9 +138,12 @@ body {
   animation: spin 1.5s linear 0s infinite;
 }
 
-header, .grand-titre, .fonctionnement, #restaurants, footer {
+.header-accueil, .grand-titre, .fonctionnement, #restaurants, footer {
+  opacity: 0;
   animation-name: loader;
-  animation-duration: 4s;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 
 /*-----------------PARTIE EN-TÊTE-------------*/
@@ -263,10 +269,10 @@ BOUTONS EXPLORER---------------*/
   margin: auto;
   margin-top: 15px;
   transform: scale(1);
-  transition: transform 0.8s;
+  transition: transform 0.5s;
 }
 .boutons:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
   box-shadow: 7px 7px 7px #bdbbbb;
 }
 .boutons .number {
@@ -354,7 +360,9 @@ a figcaption {
 }
 .aime .coeurplein {
   display: none;
-  color: #9356DC;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .aime:hover .coeurplein {
   display: flex;
@@ -375,53 +383,63 @@ a figcaption {
   position: relative;
   top: -30px;
 }
+#menu .nom_restaurants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu .nom_restaurants h1 {
+  font-weight: 1000;
+  font-family: "Shrikhand";
+}
+#menu .nom_restaurants i {
+  align-items: center;
+  font-size: 150%;
+  margin-left: 15px;
+}
 #menu h2 {
   font-weight: 20;
   text-decoration: underline #99E2D0 2px;
   margin-left: 15px;
   width: 12%;
 }
-#menu .entrees .descriptif {
-  animation: fadein 3.5s;
-  -moz-animation: fadein 3.5s;
+
+.entrees {
+  opacity: 0;
+  animation: fadein 2.5s;
+  -moz-animation: fadein 2.5s;
   /* Firefox */
-  -webkit-animation: fadein 3.5s;
+  -webkit-animation: fadein 2.5s;
   /* Safari et Chrome */
-  -o-animation: fadein 3.5s;
+  -o-animation: fadein 2.5s;
   /* Opera */
-}
-#menu .plats .descriptif {
-  animation: fadein 4.5s;
-  -moz-animation: fadein 4.5s;
-  /* Firefox */
-  -webkit-animation: fadein 4.5s;
-  /* Safari et Chrome */
-  -o-animation: fadein 4.5s;
-  /* Opera */
-}
-#menu .desserts .descriptif {
-  animation: fadein 5.5s;
-  -moz-animation: fadein 5.5s;
-  /* Firefox */
-  -webkit-animation: fadein 5.5s;
-  /* Safari et Chrome */
-  -o-animation: fadein 5.5s;
-  /* Opera */
+  animation-fill-mode: forwards;
 }
 
-.nom_restaurants {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.plats {
+  opacity: 0;
+  animation: fadein 2.5s;
+  -moz-animation: fadein 2.5s;
+  /* Firefox */
+  -webkit-animation: fadein 2.5s;
+  /* Safari et Chrome */
+  -o-animation: fadein 2.5s;
+  /* Opera */
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
-.nom_restaurants h1 {
-  font-weight: 1000;
-  font-family: "Shrikhand";
-}
-.nom_restaurants i {
-  align-items: center;
-  font-size: 150%;
-  margin-left: 15px;
+
+.desserts {
+  opacity: 0;
+  animation: fadein 2.5s;
+  -moz-animation: fadein 2.5s;
+  /* Firefox */
+  -webkit-animation: fadein 2.5s;
+  /* Safari et Chrome */
+  -o-animation: fadein 2.5s;
+  /* Opera */
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 
 .descriptif {
@@ -437,12 +455,12 @@ a figcaption {
   box-shadow: 2px 2px 2px #bdbbbb;
 }
 .descriptif:hover .selectionner {
+  width: 70px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: transform;
-  width: 35px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  padding-left: 20px;
-  height: 20px;
   animation: slide 0.5s;
 }
 .descriptif:hover .selectionner i {
@@ -533,7 +551,11 @@ footer a {
 
 /*--------------PARTIE RESPONSIVE---------------*/
 @media (min-width: 700px) {
-  /*---PARTIE EN-TÊTE---*/
+  /*---PARTIE LOADER---*/
+  .loader {
+    margin-top: 50%;
+  }
+
   /*----PATIE FONCTIONNEMENT----*/
   .fonctionnement h2 {
     margin-left: 6px;
@@ -565,10 +587,14 @@ footer a {
   #restaurants .choix-restaurant figure {
     width: 95%;
   }
-
-  /*---PARTIE MENU---*/
 }
 @media (min-width: 1000px) {
+  /*---PARTIE LOADER---*/
+  .loader {
+    margin-top: 30%;
+  }
+
+  /*---PARTIE MENU---*/
   .choix-menu {
     display: flex;
     justify-content: space-between;
@@ -581,6 +607,10 @@ footer a {
   }
   .choix-menu .desserts {
     width: 32%;
+  }
+
+  .descriptif {
+    height: 65px;
   }
 }
 
