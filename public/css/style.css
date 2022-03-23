@@ -267,13 +267,16 @@ BOUTONS EXPLORER---------------*/
   border-radius: 18px;
   box-shadow: 5px 5px 5px #bdbbbb;
   margin: auto;
-  margin-top: 15px;
+  margin-bottom: 20px;
   transform: scale(1);
-  transition: transform 0.5s;
+  transition: transform 0.8s;
 }
 .boutons:hover {
   transform: scale(1.01);
   box-shadow: 7px 7px 7px #bdbbbb;
+}
+.boutons:hover .iconsfonction {
+  color: #9356DC;
 }
 .boutons .number {
   display: flex;
@@ -291,13 +294,9 @@ BOUTONS EXPLORER---------------*/
   text-align: center;
   margin: auto;
 }
-
-.boutons i {
-  margin-right: 15px;
+.boutons .iconsfonction {
+  margin-right: 12px;
   color: #bdbbbb;
-}
-.boutons i:hover {
-  color: #9356DC;
 }
 
 /*------------------PARTIE RESTAURANTS--------------*/
@@ -362,6 +361,7 @@ a figcaption {
   display: none;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .aime:hover .coeurplein {
@@ -561,14 +561,27 @@ footer a {
   .fonctionnement h2 {
     margin-left: 6px;
   }
-  .fonctionnement .btn {
+  .fonctionnement section {
     display: flex;
     flex-direction: row;
     width: 99%;
     margin-left: -2px;
   }
-  .fonctionnement .btn .boutons {
+  .fonctionnement section .boutons {
     margin-left: 8px;
+  }
+
+  .boutons {
+    margin-bottom: 20px;
+    transform: scale(1);
+    transition: transform 0.4s;
+  }
+  .boutons:active {
+    transform: scale(1.01);
+    box-shadow: 7px 7px 7px #bdbbbb;
+  }
+  .boutons:active .iconsfonction:hover {
+    color: #9356DC;
   }
 
   /*---PARTIE RESTAURANTS---*/

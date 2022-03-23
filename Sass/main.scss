@@ -225,14 +225,19 @@ BOUTONS EXPLORER---------------*/
   border-radius: 18px;
   box-shadow: 5px 5px 5px $color-shadow;
   margin: auto;
-  margin-top: 15px;
+  margin-bottom: 20px;
   transform: scale(1);
-  transition: transform 0.5s;
+  transition: transform 0.8s;
     &:hover
     {
       transform: scale(1.01);
       box-shadow: 7px 7px 7px $color-shadow;
+      .iconsfonction
+      {
+        color: $color-primary;
+      }
     }
+    
     .number
     {
       display: flex;
@@ -251,15 +256,12 @@ BOUTONS EXPLORER---------------*/
         text-align: center;
         margin: auto;
       }
-}
 
-.boutons i{
-  margin-right: 15px; 
-  color: $color-shadow;
-    &:hover
-    {
-      color: $color-primary;
-    }
+      .iconsfonction
+      {
+        margin-right: 12px;
+        color: $color-shadow;
+      }
 }
 
 
@@ -335,6 +337,7 @@ a{
       display: none;
       background: linear-gradient($color-primary, $color-secondary);
       background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     &:hover
@@ -570,16 +573,31 @@ footer
   {
     margin-left: 6px;
   }
-.btn{
-  display: flex;
-  flex-direction: row;
-  width: 99%;
-  margin-left: -2px;
+  section{
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    margin-left: -2px;
     & .boutons
     {
       margin-left: 8px;
     }
 }
+}
+
+.boutons{
+  margin-bottom: 20px;
+  transform: scale(1);
+  transition: transform .4s;
+  &:active
+  {
+    transform: scale(1.01);
+    box-shadow: 7px 7px 7px $color-shadow;
+    .iconsfonction:hover
+    {
+      color: $color-primary;
+    }
+  }
 }
 
 
