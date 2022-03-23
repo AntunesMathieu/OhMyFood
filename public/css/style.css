@@ -571,19 +571,6 @@ footer a {
     margin-left: 8px;
   }
 
-  .boutons {
-    margin-bottom: 20px;
-    transform: scale(1);
-    transition: transform 0.4s;
-  }
-  .boutons:active {
-    transform: scale(1.01);
-    box-shadow: 7px 7px 7px #bdbbbb;
-  }
-  .boutons:active .iconsfonction:hover {
-    color: #9356DC;
-  }
-
   /*---PARTIE RESTAURANTS---*/
   #restaurants h2 {
     margin-left: 6px;

@@ -585,21 +585,6 @@ footer
 }
 }
 
-.boutons{
-  margin-bottom: 20px;
-  transform: scale(1);
-  transition: transform .4s;
-  &:active
-  {
-    transform: scale(1.01);
-    box-shadow: 7px 7px 7px $color-shadow;
-    .iconsfonction:hover
-    {
-      color: $color-primary;
-    }
-  }
-}
-
 
 /*---PARTIE RESTAURANTS---*/
 
