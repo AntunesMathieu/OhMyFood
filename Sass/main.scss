@@ -63,7 +63,7 @@ body
       width: 50px;
       position: absolute;
       top: -5px; 
-      left: -6;
+      left: -6px;
       bottom: -6px;
       right: -6px;
       border: 6px solid transparent;
@@ -397,9 +397,9 @@ a{
 .entrees{
   opacity: 0;
   animation: fadein 2.5s;
-  -moz-animation: fadein 2.5s; /* Firefox */
-  -webkit-animation: fadein 2.5s; /* Safari et Chrome */
-  -o-animation: fadein 2.5s; /* Opera */
+  animation: fadein 2.5s; /* Firefox */
+  animation: fadein 2.5s; /* Safari et Chrome */
+  animation: fadein 2.5s; /* Opera */
   animation-fill-mode: forwards;
   animation-delay: .5s;
 }
@@ -407,9 +407,9 @@ a{
 .plats{
   opacity: 0;
   animation: fadein 2.5s;
-  -moz-animation: fadein 2.5s; /* Firefox */
-  -webkit-animation: fadein 2.5s; /* Safari et Chrome */
-  -o-animation: fadein 2.5s; /* Opera */
+  animation: fadein 2.5s; /* Firefox */
+  animation: fadein 2.5s; /* Safari et Chrome */
+  animation: fadein 2.5s; /* Opera */
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
@@ -417,9 +417,9 @@ a{
 .desserts{
   opacity: 0;
   animation: fadein 2.5s;
-  -moz-animation: fadein 2.5s; /* Firefox */
-  -webkit-animation: fadein 2.5s; /* Safari et Chrome */
-  -o-animation: fadein 2.5s; /* Opera */
+  animation: fadein 2.5s; /* Firefox */
+  animation: fadein 2.5s; /* Safari et Chrome */
+  animation: fadein 2.5s; /* Opera */
   animation-fill-mode: forwards;
   animation-delay: 2s;
 }
@@ -466,7 +466,6 @@ a{
   margin-left: 5px;
   background-color: $color-tertiary;
   position: relative;
-  transform: width(35px) rotate(180deg);
 }
 
 .selectionner i{

@@ -8,33 +8,6 @@
     opacity: 1;
   }
 }
-@-moz-keyframes fadein {
-  /* sur Firefox */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes fadein {
-  /* sur Opera */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes slide {
   from {
     width: 0px;
@@ -129,7 +102,7 @@ body {
   width: 50px;
   position: absolute;
   top: -5px;
-  left: -6;
+  left: -6px;
   bottom: -6px;
   right: -6px;
   border: 6px solid transparent;
@@ -407,11 +380,11 @@ a figcaption {
 .entrees {
   opacity: 0;
   animation: fadein 2.5s;
-  -moz-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   /* Firefox */
-  -webkit-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   /* Safari et Chrome */
-  -o-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   /* Opera */
   animation-fill-mode: forwards;
   animation-delay: 0.5s;
@@ -420,11 +393,11 @@ a figcaption {
 .plats {
   opacity: 0;
   animation: fadein 2.5s;
-  -moz-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   /* Firefox */
-  -webkit-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   /* Safari et Chrome */
-  -o-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   /* Opera */
   animation-fill-mode: forwards;
   animation-delay: 1s;
@@ -433,11 +406,11 @@ a figcaption {
 .desserts {
   opacity: 0;
   animation: fadein 2.5s;
-  -moz-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   /* Firefox */
-  -webkit-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   /* Safari et Chrome */
-  -o-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   /* Opera */
   animation-fill-mode: forwards;
   animation-delay: 2s;
@@ -478,7 +451,6 @@ a figcaption {
   margin-left: 5px;
   background-color: #99E2D0;
   position: relative;
-  transform: width(35px) rotate(180deg);
 }
 
 .selectionner i {

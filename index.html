@@ -2,8 +2,7 @@
 <html lang="fr">
 
 <head>
-   <title>Oh My Food</title>
-   <meta charset="utf8" />
+   <meta charset="utf-8" />
    <link rel="stylesheet" href="public/css/style.css" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,15 +12,15 @@
 <body>
 
 
-<!-----------------PARTIE LOADER------------------->
+<!--PARTIE LOADER-->
 
 
-<section class="loader">
+<div class="loader">
    <span class="chargement loader-quart"></span>
-</section>
+</div>
 
    
-<!-------------PARTIE EN-TÊTE-------------->
+<!--PARTIE EN-TÊTE-->
 
 
    <header class="header-accueil">
@@ -38,7 +37,7 @@
 
 
 
-<!-----------------PARTIE GRAND TITRE / SOUS-TITRE / BOUTONS EXPLORER--------------->
+<!--PARTIE GRAND TITRE / SOUS-TITRE / BOUTONS EXPLORER-->
 
 
    <div class="grand-titre">
@@ -51,38 +50,38 @@
    </div>
 
 
-<!------------------PARTIE FONCTIONNEMENT------------------------------>   
+<!--PARTIE FONCTIONNEMENT-->   
 
 
-<div class="fonctionnement">
+<section class="fonctionnement">
    <h2>Fonctionnement</h2>
 
-   <section>
+   <div>
       <button class="boutons">
-      <p class="number">1</p>
-      <div class="btn-fonctionnement">
+      <span class="number">1</span>
+      <span class="btn-fonctionnement">
          <i class="fa-solid fa-mobile-screen-button iconsfonction"></i>
          Choisissez un restaurant
-      </div>
+      </span>
       </button>
       <button class="boutons">
-      <p class="number">2</p>
-      <div class="btn-fonctionnement">
+      <span class="number">2</span>
+      <span class="btn-fonctionnement">
          <i class="fa-solid fa-list-ul iconsfonction"></i>
          Composez votre menu
-      </div>
+      </span>
       </button>
       <button class="boutons">
-      <p class="number">3</p>
-      <div class="btn-fonctionnement">
+      <span class="number">3</span>
+      <span class="btn-fonctionnement">
          <i class="fa-solid fa-shop iconsfonction"></i>
          Dégustez au restaurant
-      </div>
+      </span>
       </button>
-   </section>
-</div>
+   </div>
+</section>
 
-<!------------------PARTIE RESTAURANTS----------------------->
+<!--PARTIE RESTAURANTS-->
 
 
    <div id="restaurants">
@@ -91,7 +90,7 @@
    <section class="choix-restaurant">
       <a href="la_palette_du_gout.html">
          <figure>
-            <img src="images/la_palette_du_gout.jpg" alt="la palette du goût" id="images_restaurants">
+            <img src="images/la_palette_du_gout.jpg" alt="la palette du goût" class="images_restaurants">
             <figcaption>
                <div class="nom_restaurant">
                   <h3>La palette du goût</h3>
@@ -105,7 +104,7 @@
       </a>
       <a href="la_note_enchantee.html">
          <figure>
-            <img src="images/la_note_enchantee.jpg" alt="la note enchantée" id="images_restaurants">
+            <img src="images/la_note_enchantee.jpg" alt="la note enchantée" class="images_restaurants">
             <figcaption>
                <div class="nom_restaurant">
                   <h3>La note enchantée</h3>
@@ -119,7 +118,7 @@
       </a>
       <a href="a_la_francaise.html">
          <figure>
-            <img src="images/a_la_francaise.jpg" alt="a la française" id="images_restaurants">
+            <img src="images/a_la_francaise.jpg" alt="a la française" class="images_restaurants">
             <figcaption>
                <div class="nom_restaurant">
                   <h3>À la française</h3>
@@ -133,7 +132,7 @@
       </a>
       <a href="le_delice_des_sens.html">
          <figure>
-            <img src="images/le_delice_des_sens.jpg" alt="le delice des sens" id="images_restaurants">
+            <img src="images/le_delice_des_sens.jpg" alt="le delice des sens" class="images_restaurants">
             <figcaption>
                <div class="nom_restaurant">
                   <h3>Le Délice des sens</h3>
@@ -149,7 +148,7 @@
    </div>
 
 
-<!--------------PARTIE PIED DE PAGE----------------->
+<!--PARTIE PIED DE PAGE-->
 
 
    <footer>
@@ -172,9 +171,9 @@
             Mention légale
          </div>
          </a>
-         <a href="#">
+         <a href="mailto:ohmyfood@gmail.com">
          <div class="pied">
-            <a href="mailto:ohmyfood@gmail.com">Contact</a>
+            Contact
          </div>
          </a>
       </nav>
