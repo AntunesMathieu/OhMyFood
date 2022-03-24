@@ -1,3 +1,37 @@
+@keyframes spin{
+    0%{ 
+        transform: rotate(0deg) 
+    }
+    
+    100%{ 
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes loader{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: .5;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes toloader{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
 @keyframes fadein {
     from {
         opacity:0;
@@ -36,39 +70,5 @@
 
     100%{
         transform: scaleY(1);
-    }
-}
-
-@keyframes spin{
-    0%{ 
-        transform: rotate(0deg) 
-    }
-    
-    100%{ 
-        transform: rotate(360deg)
-    }
-}
-
-@keyframes loader{
-    0%{
-        opacity: 0;
-    }
-
-    50%{
-        opacity: .5;
-    }
-    
-    100%{
-        opacity: 1;
-    }
-}
-
-@keyframes toloader{
-    from{
-        opacity: 1;
-    }
-
-    to{
-        opacity: 0;
     }
 }
