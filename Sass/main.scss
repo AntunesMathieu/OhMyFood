@@ -394,9 +394,6 @@ a{
 .entrees{
   opacity: 0;
   animation: fadein 2.5s;
-  animation: fadein 2.5s; /* Firefox */
-  animation: fadein 2.5s; /* Safari et Chrome */
-  animation: fadein 2.5s; /* Opera */
   animation-fill-mode: forwards;
   animation-delay: .5s;
 }
@@ -404,9 +401,6 @@ a{
 .plats{
   opacity: 0;
   animation: fadein 2.5s;
-  animation: fadein 2.5s; /* Firefox */
-  animation: fadein 2.5s; /* Safari et Chrome */
-  animation: fadein 2.5s; /* Opera */
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
