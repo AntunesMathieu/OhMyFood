@@ -37,7 +37,7 @@ body
   color: $color-bold;
   animation: toloader 3s linear;
   animation-fill-mode: forwards;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -49,12 +49,15 @@ body
     }
     & .loader-quart
     {
+      position: relative;
       border-radius: 50px;
       border: 6px solid rgba(139, 136, 136, 0.4);
     }
     & .loader-quart:after
     {
       content: '';
+      height: 50px;
+      width: 50px;
       position: absolute;
       top: -5px; 
       left: -6px;
@@ -188,7 +191,7 @@ BOUTONS EXPLORER---------------*/
     transition: transform 0.8s;
       &:hover{
         transform: scale(1.08);
-        box-shadow: 5px 5px 5px $color-shadow;
+        box-shadow: 5px 5px 5px $color-hover;
       }
   }
 
@@ -225,7 +228,7 @@ BOUTONS EXPLORER---------------*/
     &:hover
     {
       transform: scale(1.01);
-      box-shadow: 7px 7px 7px $color-shadow;
+      box-shadow: 7px 7px 7px $color-hover;
       .iconsfonction
       {
         color: $color-primary;
@@ -504,7 +507,7 @@ a{
       &:hover
       {
         transform: scale(1.08);
-        box-shadow: 5px 5px 5px $color-shadow;
+        box-shadow: 5px 5px 5px $color-hover;
       }
   }
 
