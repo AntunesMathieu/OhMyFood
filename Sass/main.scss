@@ -85,13 +85,37 @@ body
 header{
     display: flex;
     flex-wrap: wrap;
-    & .logo
-    {
+    #logo{ 
+      display: flex;
+      width: 100%;
+      box-shadow: 5px 3px 5px rgb(221, 221, 221);
+      & img
+      {
+        display: flex;
         width: 30%;
         margin: auto;
         margin-top: 18px;
         margin-bottom: 15px;
+      }
     }
+    #recherche{
+      width: 100%;
+      margin: 0;
+      position: relative;
+      z-index: -1;
+      .search
+      {
+          border: 0;
+          background-color: $backgroud-search;
+          height: 40px;
+          text-align: center;
+      }
+      & i
+      {
+          font-size: 100%;
+          color: $color-bold;
+      } 
+  }
 }
 
 header{
@@ -128,22 +152,6 @@ header{
     }
 }
 
-#recherche{
-    width: 100%;
-    margin: 0;
-    .search
-    {
-        border: 0;
-        background-color: $backgroud-search;
-        height: 40px;
-        text-align: center;
-    }
-    & i
-    {
-        font-size: 100%;
-        color: $color-bold;
-    } 
-}
 
 
 /*-----------------PARTIE GRAND TITRE / 
@@ -186,7 +194,7 @@ BOUTONS EXPLORER---------------*/
     border-radius: 30px;
     border: none;
     padding: 15px;
-    box-shadow: 3px 3px 3px $color-shadow;
+    box-shadow: 2px 6px 4px rgb(212, 212, 212);
     transform: scale(1);
     transition: transform 0.8s;
       &:hover{
@@ -220,7 +228,7 @@ BOUTONS EXPLORER---------------*/
   height: 60px;
   padding: 20px;
   border-radius: 18px;
-  box-shadow: 5px 5px 5px $color-shadow;
+  box-shadow: 5px 6px 10px $color-shadow;
   margin: auto;
   margin-bottom: 20px;
   transform: scale(1);
@@ -228,7 +236,7 @@ BOUTONS EXPLORER---------------*/
     &:hover
     {
       transform: scale(1.01);
-      box-shadow: 7px 7px 7px $color-hover;
+      box-shadow: 5px 7px 12px $color-hover;
       .iconsfonction
       {
         color: $color-primary;
@@ -296,7 +304,7 @@ a{
         {
             background-color: white;
             border-radius: 10px;
-            box-shadow: 3px 3px 3px $color-shadow;
+            box-shadow: 5px 5px 10px $color-shadow;
             width: 90%;
             margin: auto;
             margin-bottom: 15px;
@@ -563,11 +571,12 @@ footer
   div{
     display: flex;
     flex-direction: row;
-    width: 99%;
+    width: 100%;
     margin-left: -2px;
     & .boutons
     {
       margin-left: 8px;
+      width: 30%;
     }
 }
 }
