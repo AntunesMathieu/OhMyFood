@@ -199,7 +199,7 @@ BOUTONS EXPLORER---------------*/
     transition: transform 0.8s;
       &:hover{
         transform: scale(1.08);
-        box-shadow: 5px 5px 5px $color-hover;
+        box-shadow: 5px 5px 5px rgb(223, 220, 220);
       }
   }
 
@@ -235,7 +235,7 @@ BOUTONS EXPLORER---------------*/
   transition: transform 0.8s;
     &:hover
     {
-      transform: scale(1.01);
+      transform: scale(1.02);
       box-shadow: 5px 7px 12px $color-hover;
       .iconsfonction
       {
@@ -500,13 +500,13 @@ a{
     margin: auto;
     margin-top: 35px;
     margin-bottom: 50px;
-    box-shadow: 3px 3px 3px $color-shadow;
+    box-shadow: 3px 3px 3px rgb(212, 212, 212);
     transform: scale(1);
     transition: transform 0.8s;
       &:hover
       {
         transform: scale(1.08);
-        box-shadow: 5px 5px 5px $color-hover;
+        box-shadow: 5px 5px 5px rgb(223, 220, 220);
       }
   }
 
@@ -571,12 +571,12 @@ footer
   div{
     display: flex;
     flex-direction: row;
-    width: 100%;
     margin-left: -2px;
     & .boutons
     {
       margin-left: 8px;
-      width: 30%;
+      width: 50%;
+      transform: scale(.98);
     }
 }
 }
