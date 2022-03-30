@@ -27,22 +27,6 @@
     transform: rotate(360deg);
   }
 }
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 70px;
-  }
-}
 @keyframes heart {
   0% {
     transform: scaleY(0);
@@ -58,6 +42,22 @@
   }
   100% {
     transform: scaleY(1);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 70px;
   }
 }
 body {
@@ -98,7 +98,7 @@ body {
   height: 50px;
   width: 50px;
   position: absolute;
-  top: -5px;
+  top: -6px;
   left: -6px;
   bottom: -6px;
   right: -6px;
@@ -108,7 +108,7 @@ body {
   animation: spin 1.5s linear 0s infinite;
 }
 
-.header-accueil, .grand-titre, .fonctionnement, #restaurants, footer {
+.header-accueil, .grand-titre, .fonctionnement, #restaurants, .footer-accueil {
   opacity: 0;
   animation-name: loader;
   animation-duration: 0.5s;
@@ -219,7 +219,7 @@ BOUTONS EXPLORER---------------*/
 }
 .btn-titre:hover {
   transform: scale(1.08);
-  box-shadow: 5px 5px 5px #dfdcdc;
+  box-shadow: 5px 5px 5px #d5d5d5;
 }
 
 /*-----------------PARTIE FONCTIONNEMENT---------------*/
@@ -426,7 +426,7 @@ a figcaption {
 .descriptif:hover .selectionner i {
   overflow: hidden;
   transform: rotate(360deg);
-  transition: transform 320ms ease-in-out;
+  transition: transform 0.4s;
 }
 
 .selectionner {
@@ -478,7 +478,7 @@ a figcaption {
 }
 #menu button:hover {
   transform: scale(1.08);
-  box-shadow: 5px 5px 5px #dfdcdc;
+  box-shadow: 5px 5px 5px #d5d5d5;
 }
 
 /*--------------PARTIE PIED DE PAGE-----------------*/

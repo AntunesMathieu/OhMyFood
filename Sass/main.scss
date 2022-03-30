@@ -59,7 +59,7 @@ body
       height: 50px;
       width: 50px;
       position: absolute;
-      top: -5px; 
+      top: -6px; 
       left: -6px;
       bottom: -6px;
       right: -6px;
@@ -70,7 +70,7 @@ body
     }
 }
 
-.header-accueil, .grand-titre, .fonctionnement, #restaurants, footer
+.header-accueil, .grand-titre, .fonctionnement, #restaurants, .footer-accueil
 {
   opacity: 0;
   animation-name: loader;
@@ -199,7 +199,7 @@ BOUTONS EXPLORER---------------*/
     transition: transform 0.8s;
       &:hover{
         transform: scale(1.08);
-        box-shadow: 5px 5px 5px rgb(223, 220, 220);
+        box-shadow: 5px 5px 5px rgb(213, 213, 213);
       }
   }
 
@@ -448,7 +448,7 @@ a{
     {
       overflow: hidden;
       transform: rotate(360deg);
-      transition: transform 320ms ease-in-out;
+      transition: transform .4s;
     }
   }
 }
@@ -506,7 +506,7 @@ a{
       &:hover
       {
         transform: scale(1.08);
-        box-shadow: 5px 5px 5px rgb(223, 220, 220);
+        box-shadow: 5px 5px 5px rgb(213, 213, 213);
       }
   }
 
