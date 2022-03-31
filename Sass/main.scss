@@ -235,6 +235,7 @@ BOUTONS EXPLORER---------------*/
   transition: transform 0.8s;
     &:hover
     {
+      background-color: #F5EDFF;
       transform: scale(1.02);
       box-shadow: 10px 10px 10px $color-hover;
       .iconsfonction
@@ -494,7 +495,7 @@ a{
     background: linear-gradient($color-secondary,$color-primary);
     border-radius: 20px;
     padding: 12px;
-    width: 40%;
+    width: 150px;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -560,6 +561,17 @@ footer
 }
 
 
+/*---PARTIE HEADER---*/
+
+
+header{
+  .logo
+  {
+    max-width: 15%;
+  }
+}
+
+
 /*----PATIE FONCTIONNEMENT----*/
 
 
@@ -608,6 +620,18 @@ footer
   }
 }
 
+
+/*---PARTIE MENU---*/
+
+
+#menu{
+  button
+  {
+    width: 200px;
+  }
+}
+
+
 }
 
 
@@ -640,10 +664,21 @@ footer
   {
     width: 32%;
   }
+  button
+  {
+    width: 250px;
+  }
 }
 
 .descriptif{
   height: 65px;
+}
+
+#menu{
+  button
+  {
+    width: 250px;
+  }
 }
 
 
