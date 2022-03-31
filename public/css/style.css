@@ -421,7 +421,6 @@ a figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform;
   animation: slide 0.5s;
 }
 .descriptif:hover .selectionner i {
