@@ -386,7 +386,6 @@ a figcaption {
   opacity: 0;
   animation: fadein 2.5s;
   animation-fill-mode: forwards;
-  animation-delay: none;
   animation-delay: 0.5s;
 }
 
@@ -518,6 +517,10 @@ footer a {
 
   /*---PARTIE HEADER---*/
   #logo img {
+    max-width: 25%;
+  }
+
+  .logo {
     max-width: 25%;
   }
 
