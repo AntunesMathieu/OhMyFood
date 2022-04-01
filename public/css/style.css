@@ -516,8 +516,8 @@ footer a {
   }
 
   /*---PARTIE HEADER---*/
-  header .logo {
-    max-width: 15%;
+  header img {
+    max-width: 25%;
   }
 
   /*----PATIE FONCTIONNEMENT----*/
