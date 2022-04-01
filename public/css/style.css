@@ -423,7 +423,7 @@ a figcaption {
   align-items: center;
   animation: slide 0.5s;
 }
-.descriptif:hover .selectionner i {
+.descriptif:hover .check {
   overflow: hidden;
   transform: rotate(360deg);
   transition: transform 0.4s;
@@ -439,7 +439,7 @@ a figcaption {
   position: relative;
 }
 
-.selectionner i {
+.check {
   color: white;
   font-size: 150%;
   transition: transform;

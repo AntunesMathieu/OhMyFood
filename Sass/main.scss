@@ -444,7 +444,7 @@ a{
       align-items: center;
       animation: slide .5s;    
     }
-    .selectionner i
+    & .check
     {
       overflow: hidden;
       transform: rotate(360deg);
@@ -464,7 +464,7 @@ a{
   position: relative;
 }
 
-.selectionner i{
+.check{
   color: white;
   font-size: 150%;
   transition: transform;
