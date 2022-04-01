@@ -145,7 +145,7 @@ header #recherche .search {
   height: 40px;
   text-align: center;
 }
-header #recherche i {
+header #recherche marker {
   font-size: 100%;
   color: #222222;
 }
@@ -503,7 +503,7 @@ footer a {
   margin-top: 10px;
   margin-left: 10px;
 }
-.pied i {
+.pied .iconpied {
   margin-right: 6px;
   font-size: 70%;
 }

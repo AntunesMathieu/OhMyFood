@@ -110,7 +110,7 @@ header{
           height: 40px;
           text-align: center;
       }
-      & i
+      & marker
       {
           font-size: 100%;
           color: $color-bold;
@@ -538,7 +538,7 @@ footer
 .pied{
   margin-top: 10px;
   margin-left: 10px;
-  & i
+  & .iconpied
   {
     margin-right: 6px;
     font-size: 70%;
