@@ -520,8 +520,8 @@ footer a {
     max-width: 25%;
   }
 
-  .logo {
-    max-width: 25%;
+  .header_menu .logo {
+    max-width: 20%;
   }
 
   /*----PATIE FONCTIONNEMENT----*/
